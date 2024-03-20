@@ -30,6 +30,10 @@ const columns = [
     label: "SOURCE CODE",
   },
   {
+    key: "timeStamp",
+    label: "TIME STAMP",
+  },
+  {
     key: "actions",
     label: "ACTIONS",
   },

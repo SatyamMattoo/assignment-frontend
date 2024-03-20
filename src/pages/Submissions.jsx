@@ -54,6 +54,15 @@ const Submissions = () => {
               {submission.stdout.length < 1 ? "-" : submission.stdout}
             </p>
           );
+        case "timeStamp":
+          const date = new Date(submission.timeStamp);
+          const formattedDate = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+
+          return (
+            <p className="text-bold text-sm text-default-500">
+              {formattedDate}
+            </p>
+          );
         case "sourceCode":
           return (
             <p className="text-bold text-sm text-default-500">
