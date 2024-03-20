@@ -150,6 +150,7 @@ const Home = () => {
               <select
                 id="codeLanguage"
                 name="from_codeLanguage"
+                disabled={isExecuted}
                 className="shadow-sm outline-none text-sm rounded-lg  block w-full p-2.5 border border-slate-400 text-gray-500 my-1"
                 {...register("codeLanguage")}
                 required
@@ -174,6 +175,7 @@ const Home = () => {
             <textarea
               id="sourceCode"
               name="sourceCode"
+              disabled={isExecuted}
               rows="6"
               className="shadow-sm outline-none text-sm rounded-lg  block w-full p-2.5 border border-slate-400"
               placeholder={`function greet() {\n  console.log('Hello, world!');\n}\ngreet();`}
@@ -192,6 +194,7 @@ const Home = () => {
               <textarea
                 type="text"
                 id="stdIn"
+                disabled={isExecuted}
                 rows={3}
                 name="from_stdIn"
                 className="shadow-sm outline-none text-sm rounded-lg  block w-full p-2.5 border border-slate-400 my-1"
