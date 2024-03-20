@@ -19,7 +19,6 @@ const languageCodeMap = {
   "C++": "54",
 };
 
-
 const Home = () => {
   const {
     register,
@@ -109,7 +108,7 @@ const Home = () => {
       } else {
         toast.error(result.message);
       }
-
+      setIsExecuted(false);
       setLoading(false);
     } catch (error) {
       setError("root", {
