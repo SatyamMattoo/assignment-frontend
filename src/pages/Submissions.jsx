@@ -57,8 +57,8 @@ const Submissions = () => {
         case "timeStamp":
           return (
             <p className="text-bold text-sm text-default-500">
-              {submission.timeStamp.slice(0, 10)} at{" "}
-              {submission.timeStamp.slice(11, 16)}
+              {submission.timestamp.slice(0, 10)} at{" "}
+              {submission.timestamp.slice(11, 16)}
             </p>
           );
         case "sourceCode":
