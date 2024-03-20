@@ -55,9 +55,18 @@ const Submissions = () => {
             </p>
           );
         case "timeStamp":
-          const date = new Date(submission.timeStamp);
-          const formattedDate = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+          const [datePart, timePart] = submission.timeStamp.split(" ");
+          const [year, month, day] = datePart.split("-");
+          const [hour, minute, second] = timePart.split(":");
 
+          const formattedDate = new Date(
+            year,
+            month - 1,
+            day,
+            hour,
+            minute,
+            second
+          ).toLocaleString();
           return (
             <p className="text-bold text-sm text-default-500">
               {formattedDate}
