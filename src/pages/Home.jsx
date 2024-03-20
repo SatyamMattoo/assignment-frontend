@@ -47,7 +47,7 @@ const Home = () => {
 
     const options = {
       method: "POST",
-      url: "https://judge0-ce.p.rapidapi.com/submissions",
+      url: `${import.meta.env.VITE_APP_JUDGE_URL}`,
       params: {
         wait: "true",
         fields: "*",
@@ -55,8 +55,8 @@ const Home = () => {
       headers: {
         "content-type": "application/json",
         "Content-Type": "application/json",
-        "X-RapidAPI-Key": "2dc8d4885emshb257ce2481eb3d8p166437jsn82b191f05cf7",
-        "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
+        "X-RapidAPI-Key": `${import.meta.env.VITE_APP_JUDGE_API_KEY}`,
+        "X-RapidAPI-Host": `${import.meta.env.VITE_APP_JUDGE_HOST}`,
       },
       data: {
         language_id: languageCodeMap[codeLanguage],
