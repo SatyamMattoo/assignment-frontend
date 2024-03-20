@@ -15,8 +15,6 @@ const Submissions = () => {
         `${import.meta.env.VITE_APP_URL}/api/v1/submission/all`
       );
       setRows(data.submissions);
-
-      console.log(data);
     } catch (error) {
       toast.error("Problem fetching data");
       console.log(error);

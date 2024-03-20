@@ -67,7 +67,6 @@ const Home = () => {
 
     try {
       const response = await axios.request(options);
-      console.log(response.data);
       if (response.data.status.description === "Accepted") {
         clearErrors();
         setIsExecuted(true);
@@ -90,8 +89,6 @@ const Home = () => {
   const submitHandler = async (data) => {
     setLoading(true);
     try {
-      console.log(data);
-
       const input = { ...data, stdOut: output };
 
       const response = await axios.post(
