@@ -55,21 +55,10 @@ const Submissions = () => {
             </p>
           );
         case "timeStamp":
-          const [datePart, timePart] = submission.timeStamp.split(" ");
-          const [year, month, day] = datePart.split("-");
-          const [hour, minute, second] = timePart.split(":");
-
-          const formattedDate = new Date(
-            year,
-            month - 1,
-            day,
-            hour,
-            minute,
-            second
-          ).toLocaleString();
           return (
             <p className="text-bold text-sm text-default-500">
-              {formattedDate}
+              {submission.timeStamp.slice(0, 10)} at{" "}
+              {submission.timeStamp.slice(11, 16)}
             </p>
           );
         case "sourceCode":
